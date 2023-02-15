@@ -7,7 +7,7 @@ public class PlayerSpearCollider : MonoBehaviour
     SpriteRenderer[] rend;
     // [HideInInspector]public bool SmallMesh;
     void OnTriggerEnter(Collider other)
-    {
+    { 
         if(other.gameObject.tag=="SmallBuild"){
             other.gameObject.GetComponentInChildren<Mesh>().mesh.SetActive(true);
         }

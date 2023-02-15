@@ -30,7 +30,7 @@ public class CarController : MonoBehaviour
 
     public float moveinput;
     public float steerInput;
-    Rigidbody carRB;
+    [HideInInspector]public Rigidbody carRB;
     // public GameObject way;
     void Start()
     {
@@ -99,7 +99,7 @@ public class CarController : MonoBehaviour
             }
         }
     }
-    public void Break(int Breakforce)
+    public void Break(float Breakforce)
     {
             foreach (var wheel in wheels)
             {

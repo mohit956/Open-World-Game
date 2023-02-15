@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 527450207585998822}
   - component: {fileID: 1326832265189541268}
   - component: {fileID: 8815373052843514719}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 7495275782646301323}
   - component: {fileID: 3482599752216509339}
   - component: {fileID: 8480196062105448417}
-  m_Layer: 0
+  - component: {fileID: 4353890230066339168}
+  m_Layer: 6
   m_Name: Spoiler
-  m_TagString: Untagged
+  m_TagString: CarBack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +167,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4353890230066339168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203042868285314906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6218268, y: 0.4284438, z: 3.8348825}
+  m_Center: {x: 0, y: -0.0033168197, z: 1.8501369}
 --- !u!1 &2849841890812525030
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +193,7 @@ GameObject:
   - component: {fileID: 3226684775491707741}
   - component: {fileID: 3226684775491707739}
   - component: {fileID: 3226684775491707736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: purpole
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -232,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5933347a2f944ad4f8a3bd8a32040137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAccelaration: 6
+  maxAccelaration: 3
   breakAccelaration: 200
   TurnSenctivity: 1
   MaxStearAngle: 30
@@ -252,6 +266,7 @@ MonoBehaviour:
     axel: 1
   moveinput: 0
   steerInput: 0
+  carRB: {fileID: 0}
 --- !u!114 &3226684775491707739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,10 +280,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   way: {fileID: 0}
+  Previous_Way: {fileID: 0}
+  max_dis: 0
   carController: {fileID: 3226684775491707741}
   sponOpponent: {fileID: 5430117980733556230, guid: 41a53b2b412540443a83cc3443a64dc7, type: 3}
   reached: 0
   ObjectAhead: 0
+  trigger: 0
 --- !u!65 &3226684775491707736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -280,8 +298,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.961135, z: 7.499077}
-  m_Center: {x: 0, y: 0.73269624, z: 0.8088875}
+  m_Size: {x: 3.0208974, y: 0.5926745, z: 3.2602463}
+  m_Center: {x: 0.12712699, y: 0.77603745, z: 3.1279716}
 --- !u!1 &3724973820539993474
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +311,7 @@ GameObject:
   - component: {fileID: 728797667430101465}
   - component: {fileID: 674039539005337068}
   - component: {fileID: 8035042188235166169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RearRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +395,7 @@ GameObject:
   - component: {fileID: 3818389176232352666}
   - component: {fileID: 3818389176232352669}
   - component: {fileID: 3818389176232352667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontRightWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +509,7 @@ GameObject:
   - component: {fileID: 3818389176837968005}
   - component: {fileID: 3818389176837968004}
   - component: {fileID: 3818389176837968002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RearLeftWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +623,7 @@ GameObject:
   - component: {fileID: 3818389177287396178}
   - component: {fileID: 3818389177287396181}
   - component: {fileID: 3818389177287396179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontLeftWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3818389177722172332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +772,7 @@ GameObject:
   - component: {fileID: 3818389177770364861}
   - component: {fileID: 3818389177770364860}
   - component: {fileID: 3818389177770364863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RearRightWheel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +885,7 @@ GameObject:
   - component: {fileID: 4526935887050338774}
   - component: {fileID: 1578124657243186907}
   - component: {fileID: 3593831973191957475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7027339753544060088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,8 +1001,7 @@ GameObject:
   - component: {fileID: 6574335709506345133}
   - component: {fileID: 3608870745275104629}
   - component: {fileID: 4703264186206184881}
-  - component: {fileID: 3977839917305829249}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,19 +1074,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3977839917305829249
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7653998982902740735}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0594354, y: 0.5532233, z: 4.8205786}
-  m_Center: {x: 0, y: 1.1243306, z: -0.018977165}
 --- !u!1 &8754657518809378435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1085,7 @@ GameObject:
   - component: {fileID: 8501692989908164346}
   - component: {fileID: 2958598064921335707}
   - component: {fileID: 2047550876199664965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RearLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602795200044908212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

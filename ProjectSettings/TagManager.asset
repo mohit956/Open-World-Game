@@ -8,6 +8,9 @@ TagManager:
   - SmallMesh
   - Car
   - Way
+  - CarBack
+  - Player_Body
+  - CarDoor
   layers:
   - Default
   - TransparentFX
